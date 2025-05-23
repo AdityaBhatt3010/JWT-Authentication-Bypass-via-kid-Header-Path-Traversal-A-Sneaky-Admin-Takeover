@@ -3,6 +3,8 @@
 > *"Sometimes all it takes is a null byte and some path traversal to crack an admin panel wide open."*
 > — Aditya Bhatt
 
+![JWT_NewNew_Cover](https://github.com/user-attachments/assets/b1d386e6-36dd-42ce-997c-2d51df2f011d) <br/>
+
 ### 🚨 TL;DR
 
 In this write-up, we exploit a poorly implemented JWT validation mechanism that uses the `kid` (Key ID) parameter to fetch the secret key from the server's file system. By abusing path traversal and manipulating the JWT's `kid` value, we redirect the key lookup to `/dev/null`, and sign our token using a null byte — effectively bypassing authentication and impersonating the administrator. 🛡️
